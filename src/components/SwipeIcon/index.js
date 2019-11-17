@@ -25,7 +25,7 @@ export default class SwipeIcon extends Component {
         {showIcon && (
           <Image
             source={icon}
-            style={{ width: 35, height: icon === images.minus ? 5 : 10 }}
+            style={{ width: 35, height: icon === images.minus || icon === images.minus_black ? 5 : 10 }}
           />
         )}
       </View>

@@ -18,7 +18,8 @@ const DEVICE_HEIGHT = Dimensions.get("window").height - MARGIN_TOP;
 
 export default class SwipeUpDown extends Component{
   static defautProps = {
-    disablePressToShow: false
+    disablePressToShow: false,
+    iconColor: 'white'
   };
   constructor(props) {
     super(props);
@@ -77,7 +78,7 @@ export default class SwipeUpDown extends Component{
 
       this.customStyle.style.top = this.top + gestureState.dy;
       this.customStyle.style.height = DEVICE_HEIGHT - gestureState.dy;
-      this.swipeIconRef && this.swipeIconRef.setState({ icon: images.minus });
+      this.swipeIconRef && this.swipeIconRef.setState({ icon: this.props.iconColor === 'white' ? images.minus : images.minus_black });
       !this.state.collapsed && this.setState({ collapsed: true });
       this.updateNativeProps();
     } else if (this.checkCollapsed && gestureState.dy < -60) {
@@ -86,11 +87,11 @@ export default class SwipeUpDown extends Component{
       this.customStyle.style.top = DEVICE_HEIGHT + gestureState.dy;
       this.customStyle.style.height = -gestureState.dy + this.SWIPE_HEIGHT;
       this.swipeIconRef &&
-        this.swipeIconRef.setState({ icon: images.minus, showIcon: true });
+        this.swipeIconRef.setState({ icon: this.props.iconColor === 'white' ? images.minus : images.minus_black, showIcon: true });
       if (this.customStyle.style.top <= DEVICE_HEIGHT / 2) {
         this.swipeIconRef &&
           this.swipeIconRef.setState({
-            icon: images.arrow_down,
+            icon: this.props.iconColor === 'white' ? images.arrow_down : images.arrow_down_black,
             showIcon: true
           });
       }
@@ -112,7 +113,7 @@ export default class SwipeUpDown extends Component{
     this.customStyle.style.top = 0;
     this.customStyle.style.height = DEVICE_HEIGHT;
     this.swipeIconRef &&
-      this.swipeIconRef.setState({ icon: images.arrow_down, showIcon: true });
+      this.swipeIconRef.setState({ icon: this.props.iconColor === 'white' ? images.arrow_down : images.arrow_down_black, showIcon: true });
     this.updateNativeProps();
     this.state.collapsed && this.setState({ collapsed: false });
     this.checkCollapsed = false;

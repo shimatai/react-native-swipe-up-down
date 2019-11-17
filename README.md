@@ -12,11 +12,11 @@
 
 ## Getting started
 
-`$ npm install git+https://github.com/shimatai/react-native-swipe-up-down.git --save`
+`$ npm install rn-swipe-up-down --save`
 
 - OR
 
-`$ yarn add git+https://github.com/shimatai/react-native-swipe-up-down.git`
+`$ yarn add rn-swipe-up-down`
 
 ## Usage
 ```javascript
@@ -24,6 +24,7 @@ import SwipeUpDown from 'react-native-swipe-up-down';
 
 // TODO: What to do with the module?
 <SwipeUpDown		
+	iconColor="white" // Image icon can be "white" or "black"
 	itemMini={<ItemMini />} // Pass props component when collapsed
 	itemFull={<ItemFull />} // Pass props component when show full
 	onShowMini={() => console.log('mini')}

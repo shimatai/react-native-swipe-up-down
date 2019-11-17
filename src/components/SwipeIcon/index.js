@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Image, View, Animated } from 'react-native';
-import images from '../../assets/images';
+import images from '@assets/images';
 
 export default class SwipeIcon extends Component {
   constructor(props) {

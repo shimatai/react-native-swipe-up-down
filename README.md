@@ -20,7 +20,7 @@
 
 ## Usage
 ```javascript
-import SwipeUpDown from 'react-native-swipe-up-down';
+import SwipeUpDown from 'rn-swipe-up-down';
 
 // TODO: What to do with the module?
 <SwipeUpDown		

@@ -12,11 +12,11 @@
 
 ## Getting started
 
-`$ npm install react-native-swipe-up-down --save`
+`$ npm install git+https://github.com/shimatai/react-native-swipe-up-down.git --save`
 
 - OR
 
-`$ yarn add react-native-swipe-up-down`
+`$ yarn add git+https://github.com/shimatai/react-native-swipe-up-down.git`
 
 ## Usage
 ```javascript
